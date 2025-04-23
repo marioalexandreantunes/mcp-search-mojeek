@@ -5,14 +5,14 @@ O protocolo de contexto de modelo (MCP) é um padrão aberto desenvolvido pela A
 ## Arquitetura do MCP
 
 ### Hosts
-A aplicação voltada para o utilizador (por exemplo, Claude Desktop, IDEs como Cursor, ou agentes personalizados) que inicia as conexões.
+A aplicação voltada para o utilizador (por exemplo, Claude Desktop, IDEs como Cursor/VsCode/Trae, ou agentes personalizados) que inicia as conexões.
 Os Hosts integram Clientes MCP para comunicar com servidores.
 
 ### Cliente
 Gere uma conexão 1:1 com um Servidor MCP, tratando pedidos, respostas e descoberta de capacidades.
 Traduz instruções geradas por LLM em mensagens compatíveis com MCP.
 
-### Servidores
+### Servidor
 Expõe ferramentas (por exemplo, chamadas de API, consultas de base de dados), recursos (dados somente leitura) e prompts (modelos predefinidos) através do protocolo MCP.
 Executa localmente ou remotamente, conectando-se a sistemas como GitHub, Slack, PostgreSQL ou ficheiros locais.
 
